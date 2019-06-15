@@ -1,0 +1,440 @@
+var add=function(){
+console.log("I am Function Expression");
+}
+undefined
+add;
+ƒ (){
+console.log("I am Function Expression");
+}
+typeof add;
+"function"
+var obj={
+id:1001,
+name:'Rohan'
+};
+undefined
+obj;
+{id: 1001, name: "Rohan"}
+obj[0];
+undefined
+obj["id"];
+1001
+obj["name"];
+"Rohan"
+typeof obj;
+"object"
+function show(){
+console.log("I am show");
+}
+
+undefined
+var obj={
+show(){
+}
+}
+    
+
+undefined
+show();
+VM469:2 I am show
+undefined
+typeof show;
+"function"
+obj;
+{show: ƒ}
+typeof obj;
+"object"
+var=cart{
+add(){
+}
+}
+VM592:1 Uncaught SyntaxError: Unexpected token =
+var cart={
+add(){
+}
+}
+undefined
+var user={
+add(){
+}
+}
+undefined
+window.cart;
+{add: ƒ}add: ƒ add()__proto__: Object
+window.user;
+{add: ƒ}
+window.cart.add;
+ƒ add(){
+}
+var obj={
+id:1001,
+name:'Rohan',
+add:function(){
+console.log("obj Add");
+}
+};
+undefined
+var t=1000;
+var obj2={
+t,
+//add:function(){}
+add(){
+}
+}
+undefined
+obj2.add();
+undefined
+obj2.t;
+1000
+obj;
+{id: 1001, name: "Rohan", add: ƒ}
+obj instanceof add;
+false
+cart.add;
+ƒ add(){
+}
+function calc(){
+var  add=function(x,y){
+return x+y;
+}
+var sub[=function(x,y){
+return x-y;
+}
+}
+VM1142:5 Uncaught SyntaxError: Unexpected token [
+function calc(){
+var  add=function(x,y){
+return x+y;
+}
+var sub=function(x,y){
+return x-y;
+}
+}
+undefined
+add(10);
+VM112:2 I am Function Expression
+undefined
+function calc(){
+var  add=function(x,y){
+return x+y;
+}
+var sub=function(x,y){
+return x-y;
+}
+return [add,sub];
+}
+undefined
+var z=calc();
+undefined
+z;
+(2) [ƒ, ƒ]0: ƒ (x,y)1: ƒ (x,y)length: 2__proto__: Array(0)
+z[0](100,200);
+300
+z[1](100,200);
+-100
+calc()[0](100,200);
+300
+function calc(z){
+var p=1000;
+var add=Function(x,y){
+return x+y+z+p;
+}
+var sub=function(x,y){
+return x-y-z0p;
+VM1484:3 Uncaught SyntaxError: Unexpected token {
+// How can defied Private Variable
+function calc(z){
+var p=1000;
+var add=Function(x,y){
+return x+y+z+p;
+}
+var sub=function(x,y){
+return x-y-z-p;
+}
+return [add,sub]; //public
+}
+VM1652:4 Uncaught SyntaxError: Unexpected token {
+function calc(z){
+var p= 1000;
+var add= function(x,y){
+return x+y+z+p;
+}
+var sub=function(x,y){
+return x-y-z-p;
+}
+return [add,sub]; //public
+}
+undefined
+var l=calc(10000);
+undefined
+l;
+(2) [ƒ, ƒ]0: ƒ (x,y)1: ƒ (x,y)length: 2__proto__: Array(0)
+l[0](100,200);
+11300
+l[1](100,200);
+-11100
+typeof l;
+"object"
+typeof p;
+"undefined"
+typeof add;
+"function"
+// Function Hosting
+disp();
+function disp(){
+console.log("Disp call");
+}
+
+VM1911:4 Disp call
+undefined
+output();
+var output=function(){
+console.log("Output call");
+}
+VM2016:1 Uncaught TypeError: output is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM2016:1
+//function calc(z){
+var p=1000;
+var add=Function(x,y){
+return x+y+z+p;
+}
+var sub=function(x,y){
+return x-y-z-p;
+}
+return [add,sub]; //public
+}
+VM2092:3 Uncaught SyntaxError: Unexpected token {
+// Named Function Expression
+function calc(z){
+var p=1000;
+var add=function add(x,y){
+return x+y+z+p;
+}
+var sub=function sub(x,y){
+return x-y-z-p;
+}
+return [add,sub]; //public
+}
+undefined
+var l=calc(10000);
+undefined
+l;
+(2) [ƒ, ƒ]
+l[0](100,200);
+11300
+l[1](100,200);
+-11100
+// Named Function Expression
+function calc(z){
+var p=1000;
+var add=function(x,y){
+return x+y+z+p;
+}
+var sub=function(x,y){
+return x-y-z-p;
+}
+return {add,sub};
+}
+undefined
+l[0](100,200);
+11300
+// Named Function Expression
+function calc(z){
+var p=1000;
+var add=function(x,y){
+return x+y+z+p;
+}
+var sub=function(x,y){
+return x-y-z-p;
+}
+return {"add":100,"sub":200};
+}
+undefined
+calc();
+{add: 100, sub: 200}add: 100sub: 200__proto__: Object
+l[0](100,200);
+11300
+typeof calc();
+"object"
+typeof clac;
+"undefined"
+typeof calc;
+"function"
+var add=(x,y)=>x+y;
+undefined
+add;
+(x,y)=>x+y
+add(10,20);
+30
+var add(x,y)=>{
+x=x-y;
+return x+y;
+}
+VM2586:1 Uncaught SyntaxError: Unexpected token (
+// Named Function Expression
+function calc(z){
+var p=1000;
+var add=function(x,y){
+return x+y+z+p;
+}
+var sub=function(x,y){
+return x-y-z-p;
+}
+return {"addition":add,"subtract":sub};
+}
+undefined
+var e=calc(100);
+undefined
+e;
+{addition: ƒ, subtract: ƒ}addition: ƒ (x,y)subtract: ƒ (x,y)__proto__: Object
+e.addition(10,20);
+1130
+e.subtract(10,20);
+-1110
+// Arrow Function
+var add=(x,y)=>x+y;
+undefined
+typeof add;
+"function"
+typeof add();
+"number"
+add(10.,20);
+30
+var add=(x,y)=>{
+x=x-y;
+return x+y;
+}
+undefined
+add(100,200);
+100
+function loop(fn){
+for(let i=1;i<=10;i++){
+console.log(fn(i));
+}
+}
+    
+undefined
+loop(fn);
+VM3092:1 Uncaught ReferenceError: fn is not defined
+    at <anonymous>:1:6
+(anonymous) @ VM3092:1
+function loop(fn){
+for(let i=1;i<=10;i++){
+console.log(fn(i));
+}
+loop(fn);
+}
+    
+undefined
+var evenodd=(num)=>num%2==0?`Even NO ${num}':`Odd No ${num}`;
+VM3225:1 Uncaught SyntaxError: Unexpected identifier
+var evenodd=(num)=>num%2==0?`Even NO ${num}`:`Odd No ${num}`;
+undefined
+var evenodd =num=>num%2==0?`Even NO ${num}`:`Odd No ${num}`;
+undefined
+function evenodd(num){
+return num%2==0?`Even No ${num}`:`Odd No ${num}`;
+}
+undefined
+evenodd(1);
+"Odd No 1"
+evenodd(10);
+"Even No 10"
+function loop(fn){
+for(let i=1;i<=10;i++){
+console.log(fn(i));
+}
+}
+    
+undefined
+var evenodd=(num)=>num%2==0?`Even NO ${num}`:`Odd No ${num}`;
+undefined
+evenodd(10);
+"Even NO 10"
+var evenodd =num=>num%2==0?`Even NO ${num}`:`Odd No ${num}`;
+undefined
+evenodd(23);
+"Odd No 23"
+loop(num=>num**3);
+VM3925:3 1
+VM3925:3 8
+VM3925:3 27
+VM3925:3 64
+VM3925:3 125
+VM3925:3 216
+VM3925:3 343
+VM3925:3 512
+VM3925:3 729
+VM3925:3 1000
+undefined
+loop(num=>num*5);
+VM3925:3 5
+VM3925:3 10
+VM3925:3 15
+VM3925:3 20
+VM3925:3 25
+VM3925:3 30
+VM3925:3 35
+VM3925:3 40
+VM3925:3 45
+VM3925:3 50
+undefined
+loop(num=>num*23);
+VM3925:3 23
+VM3925:3 46
+VM3925:3 69
+VM3925:3 92
+VM3925:3 115
+VM3925:3 138
+VM3925:3 161
+VM3925:3 184
+VM3925:3 207
+VM3925:3 230
+undefined
+var arr=[10,20,30];
+undefined
+typeof array;
+"undefined"
+typeof arr;
+"object"
+typeof Array;
+"function"
+arr instanceof Array;
+true
+for(let i=0; i<arr.length; i++){
+console.log(` Arr ${arr[i]}`);
+}
+VM4292:2  Arr 10
+VM4292:2  Arr 20
+VM4292:2  Arr 30
+undefined
+for(let a of arr){
+console.log(a);
+} 
+VM4348:2 10
+VM4348:2 20
+VM4348:2 30
+undefined
+arr.forEach(ele=>console.log(` Arr ${ele}`));
+VM4427:1  Arr 10
+VM4427:1  Arr 20
+VM4427:1  Arr 30
+undefined
+arr.forEach(ele=>console.log(` Arr ${ele} Index ${i}`));
+VM4443:1 Uncaught ReferenceError: i is not defined
+    at <anonymous>:1:51
+    at Array.forEach (<anonymous>)
+    at <anonymous>:1:5
+(anonymous) @ VM4443:1
+(anonymous) @ VM4443:1
+arr.forEach((ele,i)=>console.log(` Arr ${ele} Index ${i}`));
+VM4474:1  Arr 10 Index 0
+VM4474:1  Arr 20 Index 1
+VM4474:1  Arr 30 Index 2
+undefined
+arr.forEach((ele,i,ee)=>console.log(` Arr ${ele} Index ${i} Arr ${ee}`));
+VM4515:1  Arr 10 Index 0 Arr 10,20,30
+VM4515:1  Arr 20 Index 1 Arr 10,20,30
+VM4515:1  Arr 30 Index 2 Arr 10,20,30
+undefined
